@@ -1,0 +1,2101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume | Jan Xyndrex Taguines</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "Inter", sans-serif;
+
+            background: #111;
+
+            color: white;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .resume-navbar {
+
+            width: 100%;
+
+            padding: 25px 6%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.15);
+
+        }
+
+
+        .resume-logo img {
+
+            width: 60px;
+
+            height: 60px;
+
+            object-fit: contain;
+
+            filter:
+                brightness(0)
+                saturate(100%)
+                invert(100%);
+
+        }
+
+
+        .back-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 8px 18px 8px 8px;
+
+            background: white;
+
+            color: #111;
+
+            text-decoration: none;
+
+            border-radius: 40px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: .3s ease;
+
+        }
+
+
+        .back-btn span {
+
+            width: 32px;
+
+            height: 32px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #111;
+
+            color: white;
+
+            border-radius: 50%;
+
+            font-size: 16px;
+
+        }
+
+
+        .back-btn:hover {
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        /* =========================================
+           RESUME HEADER
+        ========================================= */
+
+        .resume-header {
+
+            padding:
+                100px 10%
+                70px;
+
+            background:
+
+                radial-gradient(
+                    circle at top right,
+                    #ffb545 0%,
+                    #a94f28 25%,
+                    #111 65%
+                );
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.15);
+
+        }
+
+
+        .resume-label {
+
+            display: block;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 25px;
+
+            color:
+                rgba(255,255,255,.75);
+
+        }
+
+
+        .resume-name {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(4rem, 9vw, 9rem);
+
+            line-height: .8;
+
+            font-weight: 700;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .resume-role {
+
+            font-size: 16px;
+
+            letter-spacing: 3px;
+
+            font-weight: 500;
+
+            text-transform: uppercase;
+
+            color:
+                rgba(255,255,255,.8);
+
+        }
+
+
+        /* =========================================
+           CONTACT BAR
+        ========================================= */
+
+        .contact-bar {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 30px;
+
+            padding:
+                25px 10%;
+
+            background: #0d0d0d;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.12);
+
+        }
+
+
+        .contact-item {
+
+            color: #aaa;
+
+            font-size: 13px;
+
+        }
+
+
+        .contact-item strong {
+
+            color: white;
+
+            margin-right: 5px;
+
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================= */
+
+        .resume-main {
+
+            width: 80%;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding:
+                100px 0;
+
+        }
+
+
+        /* =========================================
+           SECTION
+        ========================================= */
+
+        .resume-section {
+
+            margin-bottom: 100px;
+
+        }
+
+
+        .section-number {
+
+            display: block;
+
+            color: #ffb545;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .section-title {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size:
+                clamp(3rem, 6vw, 6rem);
+
+            line-height: .9;
+
+            margin-bottom: 50px;
+
+        }
+
+
+        /* =========================================
+           PROFILE
+        ========================================= */
+
+        .profile-text {
+
+            max-width: 850px;
+
+            color: #ccc;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =========================================
+           EDUCATION
+        ========================================= */
+
+        .resume-row {
+
+            display: grid;
+
+            grid-template-columns:
+                80px 1fr 260px;
+
+            gap: 25px;
+
+            align-items: start;
+
+            padding: 30px 0;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.15);
+
+        }
+
+
+        .resume-row:last-child {
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.15);
+
+        }
+
+
+        .row-number {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 2.7rem;
+
+            color: #ffb545;
+
+        }
+
+
+        .row-content h3 {
+
+            font-size: 1.4rem;
+
+            font-weight: 600;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .row-content p {
+
+            color: #999;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .row-date {
+
+            color: #999;
+
+            font-size: 14px;
+
+            text-align: right;
+
+        }
+
+
+        /* =========================================
+           SKILLS
+        ========================================= */
+
+        .skills-list {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 0 60px;
+
+        }
+
+
+        .skill-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 18px 0;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.15);
+
+        }
+
+
+        .skill-name {
+
+            font-size: 15px;
+
+        }
+
+
+        .skill-type {
+
+            color: #999;
+
+            font-size: 12px;
+
+        }
+
+
+        /* =========================================
+           PROJECTS
+        ========================================= */
+
+        .project-row {
+
+            display: grid;
+
+            grid-template-columns:
+                80px 1fr;
+
+            gap: 25px;
+
+            padding: 30px 0;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.15);
+
+        }
+
+
+        .project-row:last-child {
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.15);
+
+        }
+
+
+        .project-number {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 2.7rem;
+
+            color: #ffb545;
+
+        }
+
+
+        .project-row h3 {
+
+            font-size: 1.4rem;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .project-row p {
+
+            max-width: 800px;
+
+            color: #999;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================================
+           CERTIFICATION
+        ========================================= */
+
+        .certification {
+
+            background: #ffb545;
+
+            color: #111;
+
+            padding: 40px;
+
+            border-radius: 2px;
+
+        }
+
+
+        .certification h3 {
+
+            font-family:
+                "Cormorant Garamond",
+                serif;
+
+            font-size: 2.5rem;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .certification p {
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================================
+           PRINT BUTTON
+        ========================================= */
+
+        .print-area {
+
+            display: flex;
+
+            justify-content: center;
+
+            margin-top: 20px;
+
+        }
+
+
+        .print-btn {
+
+            border: none;
+
+            cursor: pointer;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding:
+                8px 20px 8px 8px;
+
+            background: white;
+
+            color: #111;
+
+            border-radius: 40px;
+
+            font-family: "Inter";
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: .3s ease;
+
+        }
+
+
+        .print-btn span {
+
+            width: 32px;
+
+            height: 32px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #111;
+
+            color: white;
+
+            border-radius: 50%;
+
+        }
+
+
+        .print-btn:hover {
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .resume-footer {
+
+            padding:
+                40px 10%;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.15);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #777;
+
+            font-size: 12px;
+
+        }
+
+
+       /* =========================================
+   PRINT — FORCE 2 PAGES
+========================================= */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    html,
+    body {
+        width: 210mm;
+        min-height: 297mm;
+        background: white !important;
+        color: #111 !important;
+        overflow: visible !important;
+    }
+
+    body {
+        font-size: 10px;
+    }
+
+
+    /* =====================================
+       HIDE UNNECESSARY ELEMENTS
+    ===================================== */
+
+    .resume-navbar,
+    .print-area {
+        display: none !important;
+    }
+
+
+    /* =====================================
+       HEADER
+    ===================================== */
+
+    .resume-header {
+
+        background: white !important;
+
+        color: #111 !important;
+
+        padding: 20mm 10mm 12mm;
+
+        border-bottom:
+            1px solid #ccc;
+
+        page-break-after: avoid;
+
+    }
+
+
+    .resume-header-content {
+
+        display: flex;
+
+        justify-content:
+            space-between;
+
+        align-items: center;
+
+        gap: 20px;
+
+    }
+
+
+    .resume-header-text {
+        flex: 1;
+    }
+
+
+    .resume-label {
+
+        color: #555 !important;
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .resume-name {
+
+        color: #111 !important;
+
+        font-size: 55px;
+
+        line-height: .82;
+
+        letter-spacing: -2px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .resume-role {
+
+        color: #444 !important;
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    /* =====================================
+       PHOTO
+    ===================================== */
+
+    .resume-photo {
+
+        width: 115px;
+
+        height: 140px;
+
+        border: 1px solid #999;
+
+    }
+
+
+    /* =====================================
+       CONTACT
+    ===================================== */
+
+    .contact-bar {
+
+        padding: 8px 10mm;
+
+        background: #f5f5f5 !important;
+
+        color: #111 !important;
+
+        border-bottom:
+            1px solid #ccc;
+
+        display: flex;
+
+        gap: 20px;
+
+        flex-wrap: nowrap;
+
+    }
+
+
+    .contact-item {
+
+        color: #555 !important;
+
+        font-size: 8px;
+
+    }
+
+
+    .contact-item strong {
+
+        color: #111 !important;
+
+    }
+
+
+    /* =====================================
+       MAIN
+    ===================================== */
+
+    .resume-main {
+
+        width: auto;
+
+        max-width: none;
+
+        margin: 0;
+
+        padding: 12mm 10mm;
+
+    }
+
+
+    /* =====================================
+       SECTIONS
+    ===================================== */
+
+    .resume-section {
+
+        margin-bottom: 20px;
+
+        break-inside: avoid;
+
+    }
+
+
+    .section-number {
+
+        color: #111 !important;
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 7px;
+
+    }
+
+
+    .section-title {
+
+        color: #111 !important;
+
+        font-size: 30px;
+
+        line-height: .9;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    /* =====================================
+       PROFILE
+    ===================================== */
+
+    .profile-text {
+
+        max-width: none;
+
+        color: #333 !important;
+
+        font-size: 10px;
+
+        line-height: 1.5;
+
+    }
+
+
+    /* =====================================
+       EDUCATION
+    ===================================== */
+
+    .resume-row {
+
+        grid-template-columns:
+            35px 1fr 100px;
+
+        gap: 12px;
+
+        padding: 10px 0;
+
+        border-top:
+            1px solid #ccc;
+
+        break-inside: avoid;
+
+    }
+
+
+    .row-number {
+
+        color: #111 !important;
+
+        font-size: 20px;
+
+    }
+
+
+    .row-content h3 {
+
+        color: #111 !important;
+
+        font-size: 10px;
+
+        margin-bottom: 3px;
+
+    }
+
+
+    .row-content p {
+
+        color: #555 !important;
+
+        font-size: 8px;
+
+        line-height: 1.4;
+
+    }
+
+
+    .row-date {
+
+        color: #555 !important;
+
+        font-size: 8px;
+
+    }
+
+
+    /* =====================================
+       SKILLS
+    ===================================== */
+
+    .skills-list {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 0 30px;
+
+    }
+
+
+    .skill-row {
+
+        padding: 7px 0;
+
+        border-bottom:
+            1px solid #ddd;
+
+        break-inside: avoid;
+
+    }
+
+
+    .skill-name {
+
+        color: #111 !important;
+
+        font-size: 9px;
+
+    }
+
+
+    .skill-type {
+
+        color: #666 !important;
+
+        font-size: 7px;
+
+    }
+
+
+    /* =====================================
+       PROJECTS
+    ===================================== */
+
+    .project-row {
+
+        grid-template-columns:
+            35px 1fr;
+
+        gap: 12px;
+
+        padding: 9px 0;
+
+        border-top:
+            1px solid #ccc;
+
+        break-inside: avoid;
+
+    }
+
+
+    .project-number {
+
+        color: #111 !important;
+
+        font-size: 20px;
+
+    }
+
+
+    .project-row h3 {
+
+        color: #111 !important;
+
+        font-size: 10px;
+
+        margin-bottom: 3px;
+
+    }
+
+
+    .project-row p {
+
+        color: #555 !important;
+
+        max-width: none;
+
+        font-size: 8px;
+
+        line-height: 1.4;
+
+    }
+
+
+    /* =====================================
+       CERTIFICATION
+    ===================================== */
+
+    .certification {
+
+        background: #eee !important;
+
+        color: #111 !important;
+
+        padding: 15px;
+
+        break-inside: avoid;
+
+    }
+
+
+    .certification h3 {
+
+        color: #111 !important;
+
+        font-size: 18px;
+
+        margin-bottom: 5px;
+
+    }
+
+
+    .certification p {
+
+        color: #444 !important;
+
+        font-size: 8px;
+
+    }
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    .resume-footer {
+
+        padding: 10px 10mm;
+
+        color: #555 !important;
+
+        border-top:
+            1px solid #ccc;
+
+        font-size: 8px;
+
+        page-break-before: avoid;
+
+    }
+
+}
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .resume-navbar {
+
+                padding:
+                    18px 20px;
+
+            }
+
+
+            .resume-header {
+
+                padding:
+                    80px 25px
+                    60px;
+
+            }
+
+
+            .resume-name {
+
+                font-size: 4rem;
+
+                letter-spacing: -2px;
+
+            }
+
+
+            .contact-bar {
+
+                padding:
+                    20px 25px;
+
+                gap: 12px;
+
+                flex-direction: column;
+
+            }
+
+
+            .resume-main {
+
+                width: auto;
+
+                margin: 0 25px;
+
+                padding:
+                    70px 0;
+
+            }
+
+
+            .resume-section {
+
+                margin-bottom: 70px;
+
+            }
+
+
+            .resume-row {
+
+                grid-template-columns:
+                    45px 1fr;
+
+                gap: 15px;
+
+            }
+
+
+            .row-date {
+
+                grid-column: 2;
+
+                text-align: left;
+
+            }
+
+
+            .skills-list {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .project-row {
+
+                grid-template-columns:
+                    45px 1fr;
+
+            }
+
+
+            .certification {
+
+                padding: 30px 25px;
+
+            }
+
+
+            .resume-footer {
+
+                padding:
+                    30px 25px;
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+        }
+
+        /* =========================================
+   RESUME HEADER WITH PHOTO
+========================================= */
+
+.resume-header-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+
+.resume-header-text {
+
+    flex: 1;
+
+}
+
+
+.resume-photo {
+
+    width: 220px;
+
+    height: 270px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border: 1px solid
+        rgba(255,255,255,.45);
+
+    background: #111;
+
+}
+
+
+.resume-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+@media (max-width: 768px) {
+
+    .resume-header-content {
+
+        flex-direction: column-reverse;
+
+        align-items: flex-start;
+
+    }
+
+    .resume-photo {
+
+        width: 150px;
+
+        height: 185px;
+
+    }
+
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <nav class="resume-navbar">
+
+        <div class="resume-logo">
+
+            <img
+                src="assets/logo.png"
+                alt="Jan Xyndrex Taguines"
+            >
+
+        </div>
+
+
+        <a
+            href="index.html"
+            class="back-btn"
+        >
+
+            <span>←</span>
+
+            Back to Portfolio
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header class="resume-header">
+
+    <div class="resume-header-content">
+
+        <div class="resume-header-text">
+
+            <span class="resume-label">
+                CURRICULUM VITAE
+            </span>
+
+            <h1 class="resume-name">
+
+                JAN XYNDREX<br>
+                TAGUINES
+
+            </h1>
+
+            <p class="resume-role">
+                Computer Science Student • Web Developer
+            </p>
+
+        </div>
+
+
+        <div class="resume-photo">
+
+            <img
+                src="assets/xyn.jpeg"
+                alt="Jan Xyndrex Taguines"
+            >
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================= -->
+
+    <div class="contact-bar">
+
+        <div class="contact-item">
+
+            <strong>Email:</strong>
+
+            janxyndrextaguines10@gmail.com
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <strong>GitHub:</strong>
+
+            github.com/jxtaguines
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <strong>Facebook:</strong>
+
+            facebook.com/jxtaguines10
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         MAIN RESUME
+    ========================================= -->
+
+    <main class="resume-main">
+
+
+        <!-- =====================================
+             PROFILE
+        ====================================== -->
+
+        <section class="resume-section">
+
+            <span class="section-number">
+                PROFILE
+            </span>
+
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+
+            <p class="profile-text">
+
+                I am Jan Xyndrex T. Taguines, a Computer Science
+                student from St. Rose College Educational Foundation,
+                Inc. with a strong interest in web development,
+                software engineering, and technology-driven solutions.
+
+                I enjoy creating practical digital systems that
+                improve processes, organize information, and provide
+                meaningful user experiences.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================
+             EDUCATION
+        ====================================== -->
+
+        <section class="resume-section">
+
+            <span class="section-number">
+                EDUCATION
+            </span>
+
+
+            <h2 class="section-title">
+                Academic Background
+            </h2>
+
+
+            <div class="resume-row">
+
+                <span class="row-number">
+                    01
+                </span>
+
+
+                <div class="row-content">
+
+                    <h3>
+                        St. Rose College Educational Foundation, Inc.
+                    </h3>
+
+                    <p>
+                        Bachelor of Science in Computer Science
+                    </p>
+
+                </div>
+
+
+                <span class="row-date">
+                    2023–2024
+                </span>
+
+            </div>
+
+
+
+            <div class="resume-row">
+
+                <span class="row-number">
+                    02
+                </span>
+
+
+                <div class="row-content">
+
+                    <h3>
+                        Corazon C. Aquino High School
+                    </h3>
+
+                    <p>
+                        Poblacion 3, Gerona, Tarlac
+                    </p>
+
+                </div>
+
+
+                <span class="row-date">
+                    2014–2020
+                </span>
+
+            </div>
+
+
+
+            <div class="resume-row">
+
+                <span class="row-number">
+                    03
+                </span>
+
+
+                <div class="row-content">
+
+                    <h3>
+                        Plastado Elementary School
+                    </h3>
+
+                    <p>
+                        Plastado, Gerona, Tarlac
+                    </p>
+
+                </div>
+
+
+                <span class="row-date">
+                    2008–2014
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             SKILLS
+        ====================================== -->
+
+        <section class="resume-section">
+
+            <span class="section-number">
+                SKILLS
+            </span>
+
+
+            <h2 class="section-title">
+                Technologies & Tools
+            </h2>
+
+
+            <div class="skills-list">
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        HTML
+                    </span>
+
+                    <span class="skill-type">
+                        Web Development
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        CSS
+                    </span>
+
+                    <span class="skill-type">
+                        Web Development
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        JavaScript
+                    </span>
+
+                    <span class="skill-type">
+                        Programming
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        PHP
+                    </span>
+
+                    <span class="skill-type">
+                        Backend Development
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        MySQL
+                    </span>
+
+                    <span class="skill-type">
+                        Database
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        Java
+                    </span>
+
+                    <span class="skill-type">
+                        Programming
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        C++
+                    </span>
+
+                    <span class="skill-type">
+                        Programming
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        GitHub
+                    </span>
+
+                    <span class="skill-type">
+                        Version Control
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        Visual Studio Code
+                    </span>
+
+                    <span class="skill-type">
+                        Development Tool
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        Responsive Web Design
+                    </span>
+
+                    <span class="skill-type">
+                        Web Design
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        Bootstrap
+                    </span>
+
+                    <span class="skill-type">
+                        Framework
+                    </span>
+
+                </div>
+
+
+                <div class="skill-row">
+
+                    <span class="skill-name">
+                        Problem Solving
+                    </span>
+
+                    <span class="skill-type">
+                        Professional Skill
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PROJECTS
+        ====================================== -->
+
+        <section class="resume-section">
+
+            <span class="section-number">
+                PROJECTS
+            </span>
+
+
+            <h2 class="section-title">
+                Selected Work
+            </h2>
+
+
+
+            <div class="project-row">
+
+                <span class="project-number">
+                    01
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        DCS Student Grading Management System
+                    </h3>
+
+                    <p>
+                        A system designed to help instructors record,
+                        compute, and monitor student academic performance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-row">
+
+                <span class="project-number">
+                    02
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        School Portal Management System
+                    </h3>
+
+                    <p>
+                        An integrated digital platform providing access
+                        to academic information, announcements, records,
+                        and essential school services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-row">
+
+                <span class="project-number">
+                    03
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Point of Sale System
+                    </h3>
+
+                    <p>
+                        A sales and inventory management system designed
+                        to simplify transactions, track products, and
+                        monitor sales.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-row">
+
+                <span class="project-number">
+                    04
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        DCS Attendance Monitoring System
+                    </h3>
+
+                    <p>
+                        A web-based platform that allows teachers to
+                        manage attendance records and students to
+                        monitor their attendance status.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-row">
+
+                <span class="project-number">
+                    05
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        DCS Profiling System
+                    </h3>
+
+                    <p>
+                        A centralized platform designed to organize
+                        and maintain student and departmental profiling
+                        records.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-row">
+
+                <span class="project-number">
+                    06
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Laser Detection System
+                    </h3>
+
+                    <p>
+                        A laser-based detection system designed to
+                        identify interruptions in a laser beam and
+                        trigger corresponding responses.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             EXPERIENCE
+        ====================================== -->
+
+        <section class="resume-section">
+
+            <span class="section-number">
+                EXPERIENCE
+            </span>
+
+
+            <h2 class="section-title">
+                Experience & Leadership
+            </h2>
+
+
+
+            <div class="resume-row">
+
+                <span class="row-number">
+                    01
+                </span>
+
+
+                <div class="row-content">
+
+                    <h3>
+                        TARELCO I
+                    </h3>
+
+                    <p>
+                        Cyber Room Intern
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="resume-row">
+
+                <span class="row-number">
+                    02
+                </span>
+
+
+                <div class="row-content">
+
+                    <h3>
+                        Photography & Digital Editing Internship
+                    </h3>
+
+                    <p>
+                        Photo Editing & Digital Media
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="resume-row">
+
+                <span class="row-number">
+                    03
+                </span>
+
+
+                <div class="row-content">
+
+                    <h3>
+                        Umangan Youth Council (UYC)
+                    </h3>
+
+                    <p>
+                        Public Information Officer
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CERTIFICATION
+        ====================================== -->
+
+        <section class="resume-section">
+
+            <span class="section-number">
+                CERTIFICATION
+            </span>
+
+
+            <h2 class="section-title">
+                Credentials
+            </h2>
+
+
+            <div class="certification">
+
+                <h3>
+                    Computer Systems Servicing (CSS) NC II
+                </h3>
+
+                <p>
+                    Technical & Systems Support
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PRINT
+        ====================================== -->
+
+        <div class="print-area">
+
+            <button
+                onclick="window.print()"
+                class="print-btn"
+            >
+
+                <span>↓</span>
+
+                Print / Save as PDF
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="resume-footer">
+
+        <span>
+            © 2026 Jan Xyndrex Taguines
+        </span>
+
+        <span>
+            Computer Science • Web Development
+        </span>
+
+    </footer>
+
+
+</body>
+</html>
