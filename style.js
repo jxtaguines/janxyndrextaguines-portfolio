@@ -9,32 +9,28 @@ document.addEventListener("DOMContentLoaded", function () {
        SECTION SCROLL REVEAL
     ========================================= */
 
-    const sections =
-        document.querySelectorAll(
-            "section:not(.hero)"
-        );
+    const sections = document.querySelectorAll(
+        "section:not(.hero)"
+    );
 
+    const observer = new IntersectionObserver(
+        function (entries) {
 
-    const observer =
-        new IntersectionObserver(
-            function (entries) {
+            entries.forEach(function (entry) {
 
-                entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
 
-                    if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
 
-                        entry.target.classList.add("show");
+                }
 
-                    }
+            });
 
-                });
-
-            },
-            {
-                threshold: 0.1
-            }
-        );
-
+        },
+        {
+            threshold: 0.1
+        }
+    );
 
     sections.forEach(function (section) {
 
@@ -68,9 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const changingText =
-        document.getElementById(
-            "changing-text"
-        );
+        document.getElementById("changing-text");
 
 
     let abilityIndex = 0;
@@ -92,8 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /* Restart animation */
-
             changingText.style.animation =
                 "none";
 
@@ -103,11 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textFade .5s ease";
 
 
-            /* Change text */
-
             changingText.textContent =
                 abilities[abilityIndex];
-
 
         }, 1500);
 
@@ -116,94 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================================
-       PROJECT VIEW / HIDE
-    ========================================= */
-
-    const buttons =
-        document.querySelectorAll(
-            ".view-project"
-        );
-
-
-    buttons.forEach(function (button) {
-
-        button.addEventListener(
-            "click",
-            function (event) {
-
-                event.preventDefault();
-
-
-                const currentPreview =
-                    this.parentElement
-                        .querySelector(
-                            ".project-preview"
-                        );
-
-
-                if (!currentPreview) {
-                    return;
-                }
-
-
-                const isOpen =
-                    currentPreview.classList
-                        .contains("show");
-
-
-                /* CLOSE ALL */
-
-                document
-                    .querySelectorAll(
-                        ".project-preview"
-                    )
-                    .forEach(function (preview) {
-
-                        preview.classList
-                            .remove("show");
-
-                    });
-
-
-                document
-                    .querySelectorAll(
-                        ".view-project"
-                    )
-                    .forEach(function (btn) {
-
-                        btn.textContent =
-                            "View →";
-
-                    });
-
-
-                /* OPEN CURRENT */
-
-                if (!isOpen) {
-
-                    currentPreview.classList
-                        .add("show");
-
-                    this.textContent =
-                        "Hide ←";
-
-                }
-
-            }
-        );
-
-    });
-
-
-
-    /* =========================================
        BACK TO TOP
     ========================================= */
 
     const backToTop =
-        document.getElementById(
-            "backToTop"
-        );
+        document.getElementById("backToTop");
 
 
     if (backToTop) {
@@ -214,13 +120,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (window.scrollY > 500) {
 
-                    backToTop.classList
-                        .add("show");
+                    backToTop.classList.add("show");
 
                 } else {
 
-                    backToTop.classList
-                        .remove("show");
+                    backToTop.classList.remove("show");
 
                 }
 
@@ -233,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
             function (event) {
 
                 event.preventDefault();
-
 
                 window.scrollTo({
 
@@ -252,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =========================================
        WEBSITE EXPERIENCE SLIDER
-========================================= */
+    ========================================= */
 
     const experienceLaptopImage =
         document.getElementById(
@@ -271,7 +174,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let experienceRunning = false;
 
 
-    /* PROJECT IMAGES */
+
+    /* =========================================
+       PROJECT IMAGES
+    ========================================= */
 
     const experienceImages = [
 
@@ -302,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================================
-       MOVE PROJECTS
+       MOVE WEBSITE PROJECTS
     ========================================= */
 
     function moveExperienceProjects() {
@@ -322,8 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         const firstProject =
-            experienceTrack
-                .firstElementChild;
+            experienceTrack.firstElementChild;
 
 
         if (!firstProject) {
@@ -347,17 +252,23 @@ document.addEventListener("DOMContentLoaded", function () {
             ) || 0;
 
 
-        /* MOVE TRACK */
+
+        /* =====================================
+           MOVE PROJECT CARDS
+        ===================================== */
 
         experienceTrack.style.transition =
-            "transform 1.2s cubic-bezier(.65,0,.35,1)";
+    "transform .8s cubic-bezier(.65,0,.35,1)";
 
 
         experienceTrack.style.transform =
             `translateX(-${projectWidth + gap}px)`;
 
 
-        /* CHANGE LAPTOP IMAGE */
+
+        /* =====================================
+           CHANGE LAPTOP SCREEN
+        ===================================== */
 
         setTimeout(function () {
 
@@ -377,6 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
             experienceLaptopImage.style.opacity =
                 "0";
 
+
             experienceLaptopImage.style.transform =
                 "scale(.96)";
 
@@ -392,17 +304,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 experienceLaptopImage.style.opacity =
                     "1";
 
+
                 experienceLaptopImage.style.transform =
                     "scale(1)";
 
-
             }, 250);
 
+        }, 500);
 
-        }, 700);
 
 
-        /* RESET TRACK */
+        /* =====================================
+           RESET PROJECT TRACK
+        ===================================== */
 
         setTimeout(function () {
 
@@ -421,7 +335,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             experienceRunning = false;
 
-
         }, 1300);
 
     }
@@ -429,13 +342,144 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================================
-       AUTOMATIC WEBSITE MOVEMENT
+       START AUTOMATIC MOVEMENT
     ========================================= */
 
-    setInterval(function () {
+    if (
+        experienceTrack &&
+        experienceLaptopImage
+    ) {
 
-        moveExperienceProjects();
+        setInterval(function () {
+    moveExperienceProjects();
+}, 2200);
 
-    }, 3000);
+    }
+
+
+
+    /* =========================================
+       CASE STUDY MODAL
+       
+       HTML already uses:
+       onclick="openCaseStudy('grading')"
+       
+       So we DO NOT add another click
+       event to .view-project here.
+    ========================================= */
+
+    const modals =
+        document.querySelectorAll(
+            ".case-study-modal"
+        );
+
+
+    /* =========================================
+       CLOSE BUTTONS
+    ========================================= */
+
+    const closeButtons =
+        document.querySelectorAll(
+            ".case-study-close"
+        );
+
+
+    closeButtons.forEach(
+        function (closeButton) {
+
+            closeButton.addEventListener(
+                "click",
+                function () {
+
+                    const modal =
+                        this.closest(
+                            ".case-study-modal"
+                        );
+
+
+                    if (modal) {
+
+                        modal.classList.remove(
+                            "show"
+                        );
+
+                    }
+
+
+                    document.body.style.overflow =
+                        "";
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* =========================================
+       CLOSE MODAL OUTSIDE
+    ========================================= */
+
+    modals.forEach(
+        function (modal) {
+
+            modal.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target ===
+                        modal
+                    ) {
+
+                        modal.classList.remove(
+                            "show"
+                        );
+
+                        document.body.style.overflow =
+                            "";
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+
+    /* =========================================
+       ESC KEY
+    ========================================= */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key ===
+                "Escape"
+            ) {
+
+                modals.forEach(
+                    function (modal) {
+
+                        modal.classList.remove(
+                            "show"
+                        );
+
+                    }
+                );
+
+
+                document.body.style.overflow =
+                    "";
+
+            }
+
+        }
+    );
 
 });
